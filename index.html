@@ -2,35 +2,51 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolyo | Benim Sitem</title>
+    <title>Portfolyo | Cesim</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS dosyamızı bağlıyoruz -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- JS dosyamızı bağlıyoruz (defer = HTML yüklendikten sonra çalıştır) -->
+    <!-- JS -->
     <script src="app.js" defer></script>
 </head>
 <body>
-    <!-- Üst kısım (logo + menü) -->
-    <header>
-        <h1>Benim Portfolyo Sitem</h1>
+    <!-- ÜST KISIM -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#hakkimda" class="logo">
+                Cesim <span>Developer</span>
+            </a>
 
-        <nav>
-            <a href="#hakkimda">Hakkımda</a>
-            <a href="#projelerim">Projelerim</a>
-            <a href="#iletisim">İletişim</a>
-        </nav>
+            <!-- Hamburger Menü Butonu -->
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <!-- Ana Menü -->
+            <nav class="site-nav" aria-label="Ana menü">
+                <ul>
+                    <li><a href="#hakkimda" data-route="hakkimda">Hakkımda</a></li>
+                    <li><a href="#projelerim" data-route="projelerim">Projelerim</a></li>
+                    <li><a href="#iletisim" data-route="iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Ana içerik alanı: JS burayı değiştirecek -->
-    <main id="app">
-        Buraya birazdan JavaScript ile içerik koyacağız...
+    <!-- ANA İÇERİK: SPA burayı değiştiriyor -->
+    <main id="app" class="container main-content" tabindex="-1">
+        <!-- JavaScript buraya dinamik içerik basacak -->
     </main>
 
-    <!-- Alt kısım -->
-    <footer>
-        <p>&copy; 2025 Cesim</p>
+    <!-- ALT KISIM -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Cesim • Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 </body>
 </html>

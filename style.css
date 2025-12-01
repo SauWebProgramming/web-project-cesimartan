@@ -1,3 +1,316 @@
+/* GENEL AYARLAR */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: rgba(99, 167, 207, 0.811);
+    color: #0b1a2b;
+    line-height: 1.6;
+}
+
+/* GENEL CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* HEADER */
+.site-header {
+    background: #0b1a2b;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo span {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* NAV */
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.site-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background: #60a5fa;
+    transition: width 0.2s ease;
+}
+
+.site-nav a:hover::after {
+    width: 100%;
+}
+
+/* HAMBURGER BUTON (MOBİL) */
+.nav-toggle {
+    display: none; /* desktop’ta gizli */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle-bar {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: 4px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ANA İÇERİK */
+.main-content {
+    padding: 2rem 1rem 3rem;
+}
+
+/* SECTIONS */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+section + section {
+    margin-top: 1.5rem;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* HAKKIMDA */
+.about-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+    align-items: start;
+}
+
+.about-text p + p {
+    margin-top: 0.5rem;
+}
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    background: rgba(15, 23, 42, 0.03);
+}
+
+/* PROJELER */
+.projects-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    margin-top: 1rem;
+}
+
+.project-card {
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+}
+
+.project-meta {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.project-link {
+    margin-top: auto;
+    align-self: flex-start;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid #0b1a2b;
+}
+
+/* FORM */
+form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #60a5fa;
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* BUTON */
+button,
+.btn-primary {
+    background: #0b1a2b;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover,
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* FORM MESAJLARI */
+.form-message {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.form-message.success {
+    color: #15803d;
+}
+
+.form-message.error {
+    color: #b91c1c;
+}
+
+/* FOOTER */
+.site-footer {
+    border-top: 1px solid rgba(15, 23, 42, 0.15);
+    padding: 1.5rem 0;
+    background: rgba(15, 23, 42, 0.96);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* RESPONSIVE - TABLET & MOBİL */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* hamburger buton mobilde görünür */
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #0b1a2b;
+        transform: translateY(-200%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        padding: 0.75rem 1rem 1rem;
+    }
+
+    .site-nav li + li {
+        margin-top: 0.5rem;
+    }
+
+    .site-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
