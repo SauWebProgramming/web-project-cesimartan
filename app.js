@@ -1,58 +1,16 @@
 // SPA ROUTES: Her sayfa için HTML şablonları
 const routes = {
     hakkimda: () => `
-        <section>
-            <h2>Hakkımda</h2>
-            <div class="about-grid">
-                <!-- Sol taraf: metin -->
-                <div class="about-text">
-                    <p class="about-intro">
-                        Merhaba, ben <strong>Cesim</strong>. Frontend geliştirme ve modern web
-                        teknolojileriyle kullanıcı dostu arayüzler oluşturmaya ilgi duyuyorum.
-                    </p>
-                    <p>
-                        HTML5, CSS3 ve JavaScript (ES6+) kullanarak dinamik ve duyarlı web
-                        arayüzleri geliştiriyorum. Bu portfolyo sitesi de tamamen
-                        <strong>Single Page Application (SPA)</strong> mantığıyla, sayfa
-                        yenilenmeden çalışan bir örnek olarak hazırlandı.
-                    </p>
-                    <p>
-                        Öğrenmeyi, yeni teknolojiler denemeyi ve tasarım ile kodu bir araya
-                        getirmeyi seviyorum. Özellikle component tabanlı yapılar, temiz kod
-                        yazımı ve kullanıcı deneyimi (UX) konularına önem veriyorum.
-                    </p>
-
-                    <div class="about-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript (ES6+)</span>
-                        <span class="tag">SPA</span>
-                        <span class="tag">Responsive Design</span>
-                        <span class="tag">Git & GitHub</span>
-                    </div>
-                </div>
-
-                <!-- Sağ taraf: kısa bilgiler / istatistikler -->
-                <aside class="about-side">
-                    <h3>Kısa Bilgiler</h3>
-                    <ul class="about-list">
-                        <li><span>Rol:</span> Frontend / Web Developer (öğrenci)</li>
-                        <li><span>Odak:</span> Modern JS, SPA, responsive tasarım</li>
-                        <li><span>Şehir:</span> İstanbul</li>
-                    </ul>
-
-                    <h3>Hedeflerim</h3>
-                    <p class="about-goal">
-                        Kısa vadede temel frontend teknolojilerinde kendimi
-                        geliştirerek gerçek projelerde yer almak; uzun vadede ise
-                        güçlü bir portfolyo ve tam zamanlı geliştirici pozisyonu
-                        hedefliyorum.
-                    </p>
-
-                    <a href="#projelerim" class="btn-primary about-cta">
-                        Projelerimi Gör
-                    </a>
-                </aside>
+        <section class="hero-section">
+            <div class="hero-inner">
+                <h1 class="hero-heading">Merhaba, ben Cesim</h1>
+                <p class="hero-lead">
+                    Frontend geliştirme ve modern web teknolojileriyle sade, hızlı ve
+                    kullanıcı dostu arayüzler oluşturmayı seviyorum.
+                </p>
+                <a href="#projelerim" class="hero-btn">
+                    Projelerimi Gör
+                </a>
             </div>
         </section>
     `,
@@ -162,9 +120,6 @@ function renderRoute() {
     } else if (route === "iletisim") {
         setupContactForm();
     }
-
-    // Odak yönetimi (erişilebilirlik için)
-    app.focus();
 }
 
 // Yerel JSON dosyasından projeleri yükle
