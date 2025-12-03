@@ -1,19 +1,37 @@
 // SPA ROUTES: Her sayfa için HTML şablonları
 const routes = {
-    hakkimda: () => `
-        <section class="hero-section">
-            <div class="hero-inner">
-                <h1 class="hero-heading">Merhaba, ben Cesim</h1>
-                <p class="hero-lead">
-                    Frontend geliştirme ve modern web teknolojileriyle sade, hızlı ve
-                    kullanıcı dostu arayüzler oluşturmayı seviyorum.
-                </p>
-                <a href="#projelerim" class="hero-btn">
-                    Projelerimi Gör
+   hakkimda: () => `
+    <section class="hero-section">
+        <div class="hero-inner">
+            <h1 class="hero-heading">Merhaba, ben Cesim</h1>
+            <p class="hero-lead">
+                Frontend geliştirme ve modern web teknolojileriyle sade, hızlı ve kullanıcı dostu
+                arayüzler oluşturmayı seviyorum.
+            </p>
+
+            <a href="#projelerim" class="hero-btn">
+                Projelerimi Gör
+            </a>
+
+            <!-- Sosyal medya ikonları -->
+            <div class="social-links">
+                <a href="https://github.com/cesimartan" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/cesim-artan-4924a6337/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/artancess?igsh=MWFqYnNjNTJzcG9zbg==" target="_blank" rel="noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:cesim.artan@ogr.sakarya.edu.tr" aria-label="E-posta">
+                    <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
-        </section>
-    `,
+        </div>
+    </section>
+`,
+
 
     projelerim: () => `
         <section>
