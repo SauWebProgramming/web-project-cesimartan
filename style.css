@@ -35,6 +35,48 @@ main {
     padding: 3.5rem 1rem 3rem;
 }
 
+/* === Sosyal medya ikonları === */
+
+.social-links {
+    margin-top: 1.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap; /* küçük ekranlarda alta geçebilsin */
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.85);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 1.1rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.social-links a:hover {
+    background-color: #f4c300;
+    color: #111827;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+}
+
+/* Küçük ekranlarda biraz küçültelim */
+@media (max-width: 600px) {
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+}
+
+
 html {
     scroll-behavior: smooth;
 }
