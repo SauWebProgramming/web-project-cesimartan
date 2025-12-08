@@ -14,5 +14,37 @@
     "type": "Web App",
     "technologies": ["JavaScript", "LocalStorage"],
     "link": ""
+  },
+  {
+    "title": "Weather Dashboard",
+    "description": "OpenWeather API ile şehir bazlı hava durumu gösteren responsive dashboard.",
+    "year": 2024,
+    "type": "Web App",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "REST API"],
+    "link": ""
+  },
+  {
+    "title": "Movie Search",
+    "description": "OMDb API kullanarak film arama ve detay görüntüleme uygulaması.",
+    "year": 2024,
+    "type": "Web App",
+    "technologies": ["JavaScript", "Fetch", "API"],
+    "link": ""
+  },
+  {
+    "title": "Landing Page",
+    "description": "Modern tasarımlı, mobil uyumlu bir tanıtım sayfası.",
+    "year": 2023,
+    "type": "UI",
+    "technologies": ["HTML5", "CSS3", "Responsive"],
+    "link": ""
+  },
+  {
+    "title": "Notes App",
+    "description": "Tarayıcı LocalStorage üzerinde çalışan basit not alma uygulaması.",
+    "year": 2023,
+    "type": "Web App",
+    "technologies": ["JavaScript", "LocalStorage", "SPA"],
+    "link": ""
   }
 ]

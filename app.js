@@ -35,9 +35,12 @@ const routes = {
 
     projelerim: () => `
         <section>
-            <h2>Projelerim</h2>
-            <p>Projelerim, yerel bir <code>projects.json</code> dosyasından
-            <code>fetch</code> ile yüklenmektedir.</p>
+        <div class="section-header">
+    <h2 class="section-title">Projelerim</h2>
+    <p class="section-subtitle">
+        Kişisel projelerim; frontend, SPA ve küçük web uygulamaları.
+    </p>
+</div>
             <div id="projects-list" class="projects-grid">
                 <!-- Projeler JavaScript ile yüklenecek -->
             </div>
