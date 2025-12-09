@@ -398,6 +398,44 @@ section h2 {
         grid-row: span 2;
     }
 }
+/* RESPONSIVE - TABLET & MOBİL */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* hamburger buton mobilde görünür */
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #0b1a2b;
+        transform: translateY(-200%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        padding: 0.75rem 1rem 1rem;
+    }
+
+    .site-nav li + li {
+        margin-top: 0.5rem;
+    }
+
+    .site-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
 /* --- Tablet (640px – 991px): 2 sütunlu, yine farklı boyutlar --- */
 @media (min-width: 640px) and (max-width: 991px) {
@@ -484,6 +522,180 @@ button,
     cursor: pointer;
     align-self: flex-start;
 }
+/* === İLETİŞİM BÖLÜMÜ === */
+
+.contact-section {
+    /* section için gelen beyaz kart stilini iptal ediyoruz */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 4rem 1.5rem 4.5rem;
+    color: #e5e7eb;
+}
+
+.contact-header {
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: #f9fafb;
+}
+
+.contact-header p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #cbd5f5;
+    opacity: 0.9;
+}
+
+/* Sol bilgi + sağ form kartı */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.4fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Sol bilgi kartı */
+.contact-info {
+    padding: 1.9rem 1.7rem;
+    border-radius: 20px;
+    background: radial-gradient(circle at top left,
+        rgba(59, 130, 246, 0.35),
+        rgba(15, 23, 42, 0.95)
+    );
+    border: 1px solid rgba(129, 140, 248, 0.55);
+    box-shadow: 0 22px 55px rgba(15, 23, 42, 0.95);
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.contact-info p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    opacity: 0.92;
+}
+
+.contact-info-list {
+    list-style: none;
+    margin: 1.3rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    font-size: 0.92rem;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #c7d2fe;
+}
+
+.contact-info-list i {
+    font-size: 1rem;
+}
+
+/* Sağ form kartı */
+.contact-form {
+    padding: 1.9rem 1.7rem;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.98);
+}
+
+/* Genel form stilinin üzerine yazalım */
+.contact-form form {
+    margin-top: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form label {
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
+/* Input & textarea koyu cam görünüm */
+.contact-form input,
+.contact-form textarea {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    color: #e5e7eb;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #60a5fa;
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+/* Gönder butonu – tam genişlik, sarı gradient */
+.contact-form .btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: linear-gradient(90deg, #facc15, #eab308);
+    color: #111827;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8);
+    transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+}
+
+.contact-form .btn-primary:hover {
+    opacity: 0.96;
+    transform: translateY(-1px);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.95);
+}
+
+/* Form geri bildirim metni (hata / başarı) */
+.contact-form .form-message {
+    margin-top: 0.6rem;
+    font-size: 0.88rem;
+}
+
+.contact-form .form-message.success {
+    color: #bbf7d0;
+}
+
+.contact-form .form-message.error {
+    color: #fecaca;
+}
+
+/* RESPONSIVE – küçük ekranlarda tek sütun */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3.2rem 1rem 3.6rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem 1.3rem;
+    }
+}
+
 
 button:hover,
 .btn-primary:hover {
@@ -553,41 +765,4 @@ button:hover,
 }
 
 
-/* RESPONSIVE - TABLET & MOBİL */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
 
-    /* hamburger buton mobilde görünür */
-    .nav-toggle {
-        display: block;
-    }
-
-    .site-nav {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        background: #0b1a2b;
-        transform: translateY(-200%);
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
-    }
-
-    .site-nav ul {
-        flex-direction: column;
-        padding: 0.75rem 1rem 1rem;
-    }
-
-    .site-nav li + li {
-        margin-top: 0.5rem;
-    }
-
-    .site-nav.open {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-}

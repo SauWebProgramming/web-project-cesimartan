@@ -48,65 +48,96 @@ const routes = {
     `,
 
     iletisim: () => `
-        <section>
+    <section class="contact-section">
+        <div class="contact-header">
             <h2>İletişim</h2>
             <p>
                 Aşağıdaki formu doldurarak benimle iletişime geçebilirsin.
-                Form HTML5 doğrulama ve ek JavaScript kontrolleri içermektedir.
             </p>
-            <form id="contact-form" novalidate>
-                <div class="form-row">
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Sol bilgi alanı -->
+            <div class="contact-info">
+                <h3>Birlikte çalışalım</h3>
+                <p>
+                    Frontend projeleri, SPA uygulamaları veya küçük web araçları için
+                    fikirlerini hayata geçirmek istersen bana yazabilirsin.
+                </p>
+
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        cesim.artan@ogr.sakarya.edu.tr
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Sakarya / Türkiye
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-code"></i>
+                        HTML • CSS • JavaScript • SPA
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sağ form alanı -->
+            <div class="contact-form">
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div>
+                            <label for="name">Ad Soyad</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                minlength="3"
+                                placeholder="Adınız Soyadınız"
+                            >
+                        </div>
+                        <div>
+                            <label for="email">E-posta</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="ornek@mail.com"
+                            >
+                        </div>
+                    </div>
+
                     <div>
-                        <label for="name">Ad Soyad</label>
+                        <label for="subject">Konu</label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
+                            id="subject"
+                            name="subject"
                             required
                             minlength="3"
-                            placeholder="Adınız Soyadınız"
+                            placeholder="Mesaj konusu"
                         >
                     </div>
+
                     <div>
-                        <label for="email">E-posta</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
+                        <label for="message">Mesaj</label>
+                        <textarea
+                            id="message"
+                            name="message"
                             required
-                            placeholder="ornek@mail.com"
-                        >
+                            minlength="20"
+                            placeholder="Mesajınız en az 20 karakter olmalıdır."
+                        ></textarea>
                     </div>
-                </div>
 
-                <div>
-                    <label for="subject">Konu</label>
-                    <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        required
-                        minlength="3"
-                        placeholder="Mesaj konusu"
-                    >
-                </div>
-
-                <div>
-                    <label for="message">Mesaj</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        required
-                        minlength="20"
-                        placeholder="Mesajınız en az 20 karakter olmalıdır."
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary">Gönder</button>
-                <div id="form-message" class="form-message" aria-live="polite"></div>
-            </form>
-        </section>
-    `
+                    <button type="submit" class="btn-primary">Gönder</button>
+                    <div id="form-message" class="form-message" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+`,
 };
 
 // URL'den route adını al (#hakkimda gibi)
