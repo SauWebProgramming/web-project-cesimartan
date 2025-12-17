@@ -37,9 +37,6 @@ const routes = {
   <section class="projects-section">
     <div class="section-header">
       <h2 class="section-title">Projelerim</h2>
-      <p class="section-subtitle">
-        Kişisel projelerim; frontend, SPA ve küçük web uygulamaları.
-      </p>
     </div>
 
     <div class="projects-toolbar glass-panel">
@@ -76,18 +73,7 @@ const routes = {
 
         <div id="projects-chips" class="filter-chips" aria-label="Proje filtreleri">
           <!-- JS ile dolacak -->
-        </div>
-
-        <div class="filters-foot">
-          <div class="hint">
-            <span class="dot dot-yellow"></span>
-            Arka planla uyumlu “glass” kartlar
-          </div>
-          <div class="hint">
-            <span class="dot dot-blue"></span>
-            Hover’da neon kenar vurgusu
-          </div>
-        </div>
+        </div> 
       </aside>
 
       <div class="projects-main">
@@ -98,7 +84,6 @@ const routes = {
         <div class="projects-list-wrap">
           <div class="projects-list-head">
             <h3>Diğer Projeler</h3>
-            <p>Arama/filtre/sıralama ile güncellenir</p>
           </div>
 
           <div id="projects-list" class="projects-list">
@@ -348,7 +333,6 @@ function renderFeatured(featuredEl, project) {
           ? `<a class="btn-mini primary" href="${project.link}" target="_blank" rel="noreferrer">Projeyi Aç</a>`
           : `<span class="btn-mini disabled" aria-disabled="true" title="Link eklenmemiş">Yakında</span>`
       }
-      <span class="subtle">Daha fazlası aşağıda</span>
     </div>
   `;
 }
